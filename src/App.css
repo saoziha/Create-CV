@@ -1,0 +1,95 @@
+p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.wrap {
+  width: 60%;
+  margin: 50px auto;
+  background-color: #272822;
+  padding: 25px 20px;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.name h1 {
+  color: #A6E22E;
+}
+
+.info {
+  text-align: right;
+  font-size: 12px;
+}
+
+.heading-3 {
+  font-size: 18px;
+  color: gray;
+}
+
+.company {
+  width: 30%;
+}
+
+.text-pink {
+  color: #F92672;
+  font-weight: bold;
+}
+
+.text-pink span {
+  color: white;
+  font-weight: normal;
+}
+
+.role {
+  width: 70%;
+  padding-left: 30px;
+}
+
+.text-blue {
+  color: #3EB7EF;
+  font-weight: bold;
+}
+
+table,
+th,
+td {
+  border: dashed 1px white;
+  border-collapse: collapse;
+  padding: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-left: none;
+  border-right: none;
+}
+
+th {
+  border-left: none;
+  text-align: left;
+}
+
+td {
+  border-right: none;
+  padding-left: 5px;
+}
+
+
+.table-heading {
+  width: 30%;
+}
+
+.education {
+  width: 50%;
+}
+
+.certification {
+  width: 50%;
+}
