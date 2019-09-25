@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Table from './Component/Table';
+import Objective from './Component/Objective';
+import WorkExperience from './Component/WorkExperience';
 
 class App extends React.Component {
   constructor(props){
@@ -15,14 +17,34 @@ class App extends React.Component {
       link: 'https://www.facebook.com/viet.thanh.3767'
     }
   }
+
+  updateInfo(){
+    this.setState((prevState, props) => {
+
+      return {
+        
+        //ở đây có thể sử dụng prevState + 'fixed' để  thay đổi dữ 
+        //liệu như bên dưới thay vì truyền thẳng 1 chuỗi như phone email...
+        dateOfBirth: prevState.dateOfBirth + ' fixed',
+        gender: prevState.gender + ' fixed',
+        phone: '0905932654 fixed',
+        email: 'Thanh.tran150020@vnuk.edu.vn fixed',
+        location: 'Da Nang, Vietnam fixed',
+        link: 'https://www.facebook.com/viet.thanh.3767 fixed'
+      };
+    })
+  }
   
   render() {
+    
+
     return (
       <div class="wrap">
         <div class="row">
           <div class="name">
             <h1>Tran Viet Thanh</h1>
             <h2>Web developer</h2>
+            <button type="" onClick = {() => this.updateInfo()}>updateInfo</button>
           </div>
           <div class="info">
             <p>{this.state.dateOfBirth}</p>
@@ -34,42 +56,11 @@ class App extends React.Component {
           </div>
         </div>
 
-        <h3 class="heading-3">//OBJECTIVE</h3>
-        <div class="row">
-          <p>Take advantages of Web Developer to become a professional front-end developer and bring value to customers.
-            From that, I will contribute to front-end development of your company.</p>
-        </div>
+        {/*Comment: Objective component  */}
+        <Objective />
 
-        <h3 class="heading-3">//WORK EXPERIENCE</h3>
-        <div class="row">
-          <div class="company">
-            <p class="text-pink">Center of Statistical Informatics Services No 3 </p>
-            <p>February 2018 - July 2018</p>
-          </div>
-          <div class="role">
-            <p class="text-blue">Web developer</p>
-            <p>Main responsibilities:</p>
-            <p>- Coding for upload and manage residential information of Central of Vietnam.</p>
-            <p>- Design web admin page.</p>
-            <p>Recognition and Gains:</p>
-            <p>- Learn to use new technology to interact with data(Entity Framework, C#, ASP.Net).</p>
-            <p>- Managing data major.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="company">
-            <p class="text-pink">Sun* Inc (Framgia Inc)</p>
-            <p>March 2019 - July 2019</p>
-          </div>
-          <div class="role">
-            <p class="text-blue">Front-end developer</p>
-            <p>Main responsibilities:</p>
-            <p>- PSD to HTML CSS Conversion</p>
-            <p>- Learning Javascript</p>
-            <p>Recognition and Gains:</p>
-            <p>- New programming language, new template engine, new technique.</p>
-          </div>
-        </div>
+        {/*Comment: Work Experience component */}
+        <WorkExperience/>
 
         {/*Comment: Table component  */}
         <Table />
